@@ -7,6 +7,6 @@ RUN go build
 
 FROM alpine:latest
 WORKDIR /app
-COPY --from=builder /app/poe-openai-proxy .
+ADD . /app
 EXPOSE 8080
 CMD [ "/app/poe-openai-proxy" ]
